@@ -1,4 +1,4 @@
-// notes/src/main/java/com/example/notes/config/CorsConfig.java
+// src/main/java/com/example/notes/config/CorsConfig.java
 package com.example.notes.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +13,10 @@ public class CorsConfig implements WebMvcConfigurer {
       .allowedOrigins(
         "http://localhost:5173",
         "http://localhost:5174",
-        "https://<frontend-domain>"
+        "https://simplenoteapp-1.onrender.com"
       )
-      .allowedMethods("GET","POST","PUT","DELETE","OPTIONS");
+      .allowedMethods("GET","POST","PUT","DELETE","OPTIONS")
+      .allowedHeaders("*");
+      // .allowCredentials(true); // only if cookies/auth needed
   }
 }
