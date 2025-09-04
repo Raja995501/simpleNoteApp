@@ -13,7 +13,8 @@ public class CorsConfig implements WebMvcConfigurer {
       .allowedOrigins(
         "http://localhost:5173",
         "http://localhost:5174",
-        "https://simplenoteapp-1.onrender.com"
+        "https://simplenoteapp-1.onrender.com",
+        "https://simple-note-app-ten.vercel.app"
       )
       .allowedMethods("GET","POST","PUT","DELETE","OPTIONS")
       .allowedHeaders("*");
